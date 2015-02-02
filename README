@@ -1,0 +1,29 @@
+Antibandit.py 
+by: Andrew Goloida and Ivan Gromov
+
+
+Overview:
+This script is designed to retrieve passwords from the capture the flag excerise located at bandit.labs.overthewire.org. It is able to retrieve every password up to level 23. 
+
+
+Installation:
+This script uses the paramiko-python module as well as some basic python modules. Make sure paramiko is installed by running "apt-get install python-paramiko". Make sure the script has read/write/execute permissions by running command "chmod 777 antibandit.py".
+
+
+Usage:
+./antibandit.py [level number]
+This script takes one argument. Input the level for which the script will return the password for.
+
+
+Output:
+The script will tell you what level it is currently working on, the username and password that it is using to login to the bandit server, and eventually the password that is recovered. Then a two second pause is made and the script moves on to the next level until it reaches the level you specified. 
+
+
+Contributions:
+Ivan - Setup the paramiko functions. Levels 0-14
+Andrew - Setup the loop and function. Error handling. Levels 15-23
+
+
+
+Note:
+Level #16 requires to you to figure out which port can handle ssl connections. The script does not scan the ports but automatically connects to the known port.
